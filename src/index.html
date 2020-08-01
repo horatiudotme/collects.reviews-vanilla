@@ -1,0 +1,29 @@
+---
+---
+
+Hello3
+
+{{ reviews | dump }}
+
+<hr>
+
+{{ reviews.pitchblackwallpaper | dump }}
+
+<hr>
+
+{% for type, reviewsByYear in reviews.pitchblackwallpaper %}
+
+  <div>
+    <h2>{{ type }}</h2>
+    <ul>
+      {% for year in reviewsByYear %}
+        {% for review in year %}
+        <li>
+          {{ review.quote }} - {{ review.url }}
+        </li>
+        {% endfor %}
+      {% endfor %}
+    </ul>
+  </div>
+
+{% endfor %}
