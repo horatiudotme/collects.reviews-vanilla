@@ -1,5 +1,6 @@
 {% macro reviewBlock(review, reviewType, app) %}
   <li data-review-type="{{ reviewType }}">
+    <p># {{ app.name | safe }}</p>
     <blockquote cite="{{ review.url }}">
       <p>{{ review.quote | safe }}</p>
       <footer>
@@ -14,7 +15,8 @@
             [NOSTARS]
           {% endif -%}
 
-          {{ review.source | safe }} about {{ app.name | safe }}
+          {# {{ review.source | safe }} &nbsp;&nbsp;&nbsp; App: {{ app.name | safe }} #}
+          {{ review.sourceLine if review.sourceLine else review.source | safe }}
         </a>
       </footer>
     </blockquote>
