@@ -1,9 +1,9 @@
-{% macro reviewBlock(review, reviewType) %}
-  <li class="{{ reviewType }}">
+{% macro reviewBlock(review, reviewType, app) %}
+  <li data-review-type="{{ reviewType }}">
     <blockquote cite="{{ review.url }}">
-      <p>{{ review.quote }}</p>
+      <p>{{ review.quote | safe }}</p>
       <footer>
-        <a href="{{ review.url }}" target="_blank">{{ review.source }}</a>
+        <a href="{{ app[review.defaultUrl] if review.defaultUrl else review.url }}" target="_blank">{{ review.source | safe }}</a>
       </footer>
     </blockquote>
   </li>
