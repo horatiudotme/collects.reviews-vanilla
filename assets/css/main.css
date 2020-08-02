@@ -1,0 +1,77 @@
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+body {
+  font-family: 'Karla', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.cr-container {
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
+/* ==========================================================================
+   Reviews
+   ========================================================================== */
+
+.cr-blockquote {
+  font-size: 1.6rem;
+  margin: 0 0 3rem 0;
+}
+
+@media (min-width: 1200px) {
+  .cr-blockquote {
+    font-size: 3.35rem;
+    margin-bottom: 5rem;
+  }
+}
+
+.cr-blockquote__header {
+  font-size: 40%;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+.cr-blockquote__text {
+  line-height: 1.175;
+}
+
+.cr-blockquote__footer {
+  font-size: 50%;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+
+
+.cr-list--unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+i[data-emoji] {
+  filter: grayscale(1);
+  font-style: normal;
+}
