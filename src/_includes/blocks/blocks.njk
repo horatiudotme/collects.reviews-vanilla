@@ -1,0 +1,10 @@
+{% macro reviewBlock(review, reviewType) %}
+  <li class="{{ reviewType }}">
+    <blockquote cite="{{ review.url }}">
+      <p>{{ review.quote }}</p>
+      <footer>
+        <a href="{{ review.url }}" target="_blank">{{ review.source }}</a>
+      </footer>
+    </blockquote>
+  </li>
+{% endmacro %}
