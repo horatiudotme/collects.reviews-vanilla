@@ -1,12 +1,14 @@
 {% macro reviewBlock(review, reviewType, app) %}
+  {% set url = app[review.defaultUrl] if review.defaultUrl else review.url %}
+
   <li data-review-type="{{ reviewType }}">
-    <p># {{ app.name | safe }}</p>
-    <blockquote cite="{{ review.url }}">
-      <p>{{ review.quote | safe }}</p>
-      <footer>
-        <a href="{{ app[review.defaultUrl] if review.defaultUrl else review.url }}" target="_blank">
+    <blockquote class="cr-blockquote" cite="{{ url }}">
+      <header class="cr-blockquote__header"># {{ app.name | safe }}</header>
+      <p class="cr-blockquote__text">{{ review.quote | safe }}</p>
+      <footer class="cr-blockquote__footer">
+        <a href="{{ url }}" target="_blank">
           {% if review.stars -%}
-            <span style="color: red;">
+            <span>
               {%- for i in range(0, review.stars) -%}
                 ★
               {%- endfor -%}

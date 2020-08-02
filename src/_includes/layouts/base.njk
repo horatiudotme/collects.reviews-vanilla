@@ -1,1 +1,25 @@
-{{ content | safe }}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>{{ seoTitle }}</title>
+  <meta name="description" content="{{ seoDescription }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ "/assets/css/normalize.css" | url }}">
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | url }}">  
+
+  <meta name="theme-color" content="#fafafa">  
+
+</head>
+<body>
+  <div class="cr-container">
+    {{ content | safe }}
+  </div>
+</body>
+
+</html>
