@@ -3,7 +3,17 @@
     <blockquote cite="{{ review.url }}">
       <p>{{ review.quote | safe }}</p>
       <footer>
-        <a href="{{ app[review.defaultUrl] if review.defaultUrl else review.url }}" target="_blank">{{ review.source | safe }}</a>
+        <a href="{{ app[review.defaultUrl] if review.defaultUrl else review.url }}" target="_blank">
+          {% if review.stars -%}
+            <span style="color: red;">
+              {%- for i in range(0, review.stars) -%}
+                ★
+              {%- endfor -%}
+            </span>
+          {% endif -%}
+
+          {{ review.source | safe }} about {{ app.name | safe }}
+        </a>
       </footer>
     </blockquote>
   </li>

@@ -1,39 +1,46 @@
 - quote: Perfect app
-  source: ★★★★★ Savaş Daniş on Google Play
+  source: Savaş Daniş
   defaultUrl: googlePlayUrl
+  stars: 5
   date: 2019-12-10
 
 - quote: Cool! No ads, no bugs, thanks a lot.
-  source: ★★★★★ rajaraman v on Google Play
+  source: rajaraman v
   defaultUrl: googlePlayUrl
+  stars: 5
   date: 2019-11-23
   fav: true
 
 - quote: h'mm, love your apps it also saves me a lot of battery and I mean a lot, thanks for this guys...<i data-emoji>😂👈👍</i>
-  source: ★★★★★ Jimmy Brown on Google Play
+  source: Jimmy Brown
   defaultUrl: googlePlayUrl
+  stars: 5
   date: 2019-11-18
 
 - quote: Simply fantastic, great relaxation for the eyes ... Advised ..
   original: Semplicemente fantastico, ottimo relax per occhi... Consiglio..
   lang: Italian
-  source: ★★★★★ Ivanka Vurusic on Google Play
+  source: Ivanka Vurusic
   defaultUrl: googlePlayUrl
+  stars: 5
   date: 2019-10-25
 
 - quote: Love this app because of simplicity.
-  source: ★★★★★ Efren Galvez on Google Play
+  source: Efren Galvez
   defaultUrl: googlePlayUrl
+  stars: 5
   date: 2019-10-22
   fav: true
 
 - quote: Great wallpaper for increasing charging speed
-  source: ★★★★★ Somto Ibik on Google Play
+  source: Somto Ibik
   defaultUrl: googlePlayUrl
+  stars: 5
   date: 2019-10-04
 
 - quote: Probably the best app experience I have ever come across :)
-  source: ★★★★★ Kálmán Magyari on Google Play
+  source: Kálmán Magyari
   defaultUrl: googlePlayUrl
+  stars: 5
   date: 2019-09-21
   fav: true
