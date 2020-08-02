@@ -10,6 +10,8 @@
                 ★
               {%- endfor -%}
             </span>
+          {% else %}
+            [NOSTARS]
           {% endif -%}
 
           {{ review.source | safe }} about {{ app.name | safe }}
