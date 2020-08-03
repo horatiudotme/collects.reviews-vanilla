@@ -88,6 +88,10 @@ ul {
   margin-bottom: 0.25rem;
 }
 
+[data-fav] .cr-blockquote__text {
+  font-weight: bold;
+}
+
 .cr-blockquote__rating {
   font-size: 80%;
 }
