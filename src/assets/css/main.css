@@ -15,6 +15,16 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  /* color: #999; */
+  /* border-bottom: 1px solid; */
+  border: 1px solid;
+  padding: 0.5rem;
+  /* padding: 0.5rem 0; */
+  /* text-decoration-line: underline overline;
+  text-decoration-style: dotted; */
+}
+
 p {
   margin-top: 0;
   margin-bottom: 1rem;
@@ -30,6 +40,7 @@ ul {
 .cr-container {
   margin: 0 auto;
   max-width: 1140px;
+  padding: 0 1.75rem;
 }
 
 /* ==========================================================================
@@ -41,6 +52,25 @@ ul {
   margin: 0 0 3rem 0;
 }
 
+@media (min-width: 576px) {
+  .cr-blockquote {
+    font-size: 2.2rem;
+    margin-bottom: 4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .cr-blockquote {
+    font-size: 2.4rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .cr-blockquote {
+    font-size: 2.8rem;
+  }
+}
+
 @media (min-width: 1200px) {
   .cr-blockquote {
     font-size: 3.35rem;
@@ -50,20 +80,26 @@ ul {
 
 .cr-blockquote__header {
   font-size: 40%;
-  font-style: normal;
-  line-height: 1.5;
+  margin-bottom: 0.25rem;
 }
 
 .cr-blockquote__text {
   line-height: 1.175;
+  margin-bottom: 0.25rem;
 }
 
-.cr-blockquote__footer {
+.cr-blockquote__rating {
+  font-size: 80%;
+}
+
+.cr-blockquote__source {
+  font-size: 60%;
+  margin-bottom: 0.25rem;
+}
+
+.cr-blockquote__hostname {
   font-size: 50%;
-  font-style: normal;
-  line-height: 1.5;
 }
-
 
 
 .cr-list--unstyled {

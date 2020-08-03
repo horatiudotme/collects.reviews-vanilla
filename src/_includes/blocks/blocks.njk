@@ -1,12 +1,14 @@
 {% macro reviewBlock(review, reviewType, app) %}
-  {% set url = app[review.defaultUrl] if review.defaultUrl else review.url %}
-
   <li data-review-type="{{ reviewType }}">
-    <blockquote class="cr-blockquote" cite="{{ url }}">
-      <header class="cr-blockquote__header"># {{ app.name | safe }}</header>
+    <blockquote class="cr-blockquote" cite="{{ review.url }}">
+      <header class="cr-blockquote__header">
+        <a href="{{ app.homeUrl }}" target="_blank">
+          # {{ app.name | safe }}
+        </a>
+      </header>
       <p class="cr-blockquote__text">{{ review.quote | safe }}</p>
       <footer class="cr-blockquote__footer">
-        <a href="{{ url }}" target="_blank">
+        <div class="cr-blockquote__rating">
           {% if review.stars -%}
             <span>
               {%- for i in range(0, review.stars) -%}
@@ -14,12 +16,20 @@
               {%- endfor -%}
             </span>
           {% else %}
-            [NOSTARS]
+            {# [NOSTARS] #}
           {% endif -%}
 
-          {# {{ review.source | safe }} &nbsp;&nbsp;&nbsp; App: {{ app.name | safe }} #}
-          {{ review.sourceLine if review.sourceLine else review.source | safe }}
-        </a>
+        </div>
+
+        <div class="cr-blockquote__source">
+          {{ (review.sourceLine if review.sourceLine else review.source) | safe }}
+        </div>
+
+        <div class="cr-blockquote__hostname">
+          <a href="{{ review.url }}" target="_blank">
+            {{ review.hostname if review.hostname else review.url | wwwlessHostname }}
+          </a>
+        </div>
       </footer>
     </blockquote>
   </li>
